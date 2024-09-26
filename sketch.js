@@ -39,7 +39,7 @@ function createNewCirclesAndSquaresAndColors() {
     //voeg de square toe aan de squaresArray
     squareXarray.push(random(800));
     squareYarray.push(random(600));
-    squareiSzeArray.push(random(10, 100));
+    squareSizeArray.push(random(10, 100));
 
     drieHoekPunt1x.push(random(200,400));
     drieHoekPunt1y.push(random(200,400));
