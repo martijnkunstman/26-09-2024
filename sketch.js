@@ -1,6 +1,6 @@
 let squareXarray = []; //array voor de x positie van de square
 let squareYarray = []; //array voor de y positie van de square
-let squareiSzeArray = []; //array voor de grootte van de square
+let squareSizeArray = []; //array voor de grootte van de square
 
 let colorArray = [];
 
@@ -90,7 +90,7 @@ function draw() {
 
     let x = squareXarray[i];
     let y = squareYarray[i];
-    let size = squareiSzeArray[i];
+    let size = squareSizeArray[i];
     square(x, y, size);
 
     let p1x = drieHoekPunt1x[i];
