@@ -4,7 +4,7 @@ let squareiSzeArray = []; //array voor de grootte van de square
 
 let squareCount = 100; //aantal squares
 
-let start = true;
+let start = true; //om te controleren of het de eerste keer is dat de pagina wordt geladen
 
 function createNewCirclesAndSquaresAndColors() {
   //maak arrays leeg
@@ -21,13 +21,13 @@ function createNewCirclesAndSquaresAndColors() {
 }
 
 function draw() {
-  if (start) {
+  if (start) { //als het de eerste keer is dat de pagina wordt geladen
     createNewCirclesAndSquaresAndColors();
-    start = false;
+    start = false; //zet start op false zodat dit niet meer wordt uitgevoerd
+    createCanvas(800, 600);
   }
-  createCanvas(800, 600);
-  background(100);
-  fill("red");
+  background(100); //maak de achtergrond grijs
+  fill("red"); //maak de kleur van de squares rood
   for (let i = 0; i < squareCount; i++) {
     let x = squareXarray[i];
     let y = squareYarray[i];
@@ -37,5 +37,5 @@ function draw() {
 }
 
 function mousePressed() {
-  createNewCirclesAndSquaresAndColors();
+  createNewCirclesAndSquaresAndColors(); //maak nieuwe squares aan
 }
