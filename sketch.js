@@ -4,6 +4,8 @@ let squareiSzeArray = []; //array voor de grootte van de square
 
 let squareCount = 100; //aantal squares
 
+let start = true;
+
 function createNewCirclesAndSquaresAndColors() {
   //maak arrays leeg
   squareXarray = [];
@@ -14,17 +16,16 @@ function createNewCirclesAndSquaresAndColors() {
     //voeg de square toe aan de squaresArray
     squareXarray.push(random(800));
     squareYarray.push(random(600));
-    squareiSzeArray.push(random(10,100))
+    squareiSzeArray.push(random(10, 100));
   }
 }
 
-function setup() {
-  createCanvas(800, 600);
-  background(100);
-  createNewCirclesAndSquaresAndColors();
-}
-
 function draw() {
+  if (start) {
+    createNewCirclesAndSquaresAndColors();
+    start = false;
+  }
+  createCanvas(800, 600);
   background(100);
   fill("red");
   for (let i = 0; i < squareCount; i++) {
