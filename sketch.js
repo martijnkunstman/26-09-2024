@@ -6,6 +6,9 @@ let squareCount = 100; //aantal squares
 
 let start = true; //om te controleren of het de eerste keer is dat de pagina wordt geladen
 
+//nog zelf toevoegen: circles, triangles, colors
+
+
 function createNewCirclesAndSquaresAndColors() {
   //maak arrays leeg
   squareXarray = [];
@@ -19,6 +22,15 @@ function createNewCirclesAndSquaresAndColors() {
     squareiSzeArray.push(random(10, 100));
   }
 }
+
+/*
+
+er is GEEN setup functie zoals wordt gevraagd in de opdracht
+
+function setup() {
+}
+
+*/
 
 function draw() {
   if (start) { //als het de eerste keer is dat de pagina wordt geladen
@@ -36,6 +48,7 @@ function draw() {
   }
 }
 
+// dit moet nog worden omgeschreven naar een key event functie
 function mousePressed() {
   createNewCirclesAndSquaresAndColors(); //maak nieuwe squares aan
 }
